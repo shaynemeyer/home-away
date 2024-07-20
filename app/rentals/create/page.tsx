@@ -1,4 +1,4 @@
 function RentalCreatePage() {
-  return <div>RentalCreatePage</div>;
+  return <h1 className="text-3xl">RentalCreatePage</h1>;
 }
 export default RentalCreatePage;
