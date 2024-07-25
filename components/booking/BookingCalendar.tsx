@@ -21,6 +21,12 @@ function BookingCalendar() {
     useProperty.setState({ range });
   }, [range]);
 
+  const bookings = useProperty((state) => state.bookings);
+  const blockedPeriods = generateBlockedPeriods({
+    bookings,
+    today: currentDate,
+  });
+
   return (
     <Calendar
       mode="range"
@@ -28,6 +34,7 @@ function BookingCalendar() {
       selected={range}
       onSelect={setRange}
       className="mb-4"
+      disabled={blockedPeriods}
     />
   );
 }
