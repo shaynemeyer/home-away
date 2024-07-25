@@ -1,3 +1,4 @@
+"use client";
 import { LuUser2 } from "react-icons/lu";
 import { fetchProfileImage } from "@/utils/actions";
 import { useEffect, useState } from "react";
